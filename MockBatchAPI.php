@@ -7,7 +7,7 @@ class MockBatchAPI
 {
 
     /**
-     * Processes a batch
+     * Processes a batch. Fails if any elements are false
      * @param array $batch
      * @return bool
      */
