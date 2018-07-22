@@ -12,7 +12,6 @@ $batch = $mockAPI->generateBatch(100, [9, 66, 87]);
 // search for failures
 //
 $search->findFailuresInBatch($batch);
-
 dd($search);
 
 
