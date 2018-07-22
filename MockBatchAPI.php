@@ -22,6 +22,20 @@ class MockBatchAPI
         return true;
     }
 
+    public function generateBatchWithRandomFailures(int $size, int $failurePercent)
+    {
+        $failPositions = [];
+
+        $randMax = floor(100 / $failurePercent);
+
+        for ($i = 0; $i < $size; $i++) {
+            if (rand(0, $randMax) == 0) {
+                $failPositions[] = $i;
+            }
+        }
+
+        return $this->generateBatch($size, $failPositions);
+    }
 
     /**
      * returns a a batch of $size, setting failPositions to false
