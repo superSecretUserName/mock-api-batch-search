@@ -1,0 +1,8 @@
+{
+    "name": "supersecretusername/mock-api-batch-search",
+    "description": "models an api that handles batches. Uses binary search to retry batches and identify problem elements.",
+    "type": "project",
+    "require": {
+        "symfony/var-dumper": "^4.1"
+    }
+}
